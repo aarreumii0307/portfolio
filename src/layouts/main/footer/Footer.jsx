@@ -1,67 +1,9 @@
 import styled from "styled-components";
-import { useRef, useEffect } from "react";
 
 function Footer() {
-  // const img01Ref = useRef(null);
-  // const img02Ref = useRef(null);
-  const img03Ref = useRef(null);
-  const img04Ref = useRef(null);
-
-  let x = 0;
-  let y = 0;
-  let mx = 0;
-  let my = 0;
-
-  const handleMouseMove = (e) => {
-    x = e.clientX - window.innerWidth / 2;
-    y = e.clientY - window.innerHeight / 2;
-  };
-
-  const loop = () => {
-    // const img01 = img01Ref.current;
-    // const img02 = img02Ref.current;
-    const img03 = img03Ref.current;
-    const img04 = img04Ref.current;
-
-    const speed = 0.05;
-
-    mx += (x - mx) * speed;
-    my += (y - my) * speed;
-    // img01.style.transform = `translate(${mx / 9}px, ${my / 5}px)`;
-    // img02.style.transform = `translate(${mx / -9}px, ${my / 8}px)`;
-    img03.style.transform = `translate(${mx / 10}px, ${my / 9}px)`;
-    img04.style.transform = `translate(${mx / -9}px, ${my / 10}px)`;
-
-    window.requestAnimationFrame(loop);
-  };
-
-  useEffect(() => {
-    window.addEventListener("mousemove", handleMouseMove);
-
-    loop();
-
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, []);
   return (
     <Container>
       <Wrap>
-        <ImgList>
-          {/* <Img01>
-            <img className="cilcle_01" alt="circle_bg" src="/img/Ellipse5.png" ref={img01Ref} />
-          </Img01> */}
-
-          {/* <Img02>
-            <img className="cilcle_02" alt="circle_bg" src="/img/Ellipse6.png" ref={img02Ref} />
-          </Img02> */}
-          <Img03>
-            <img src={`${process.env.PUBLIC_URL}/img/Ellipse9.png`} className="cilcle_03" alt="circle_bg" ref={img03Ref} />
-          </Img03>
-          <Img04>
-            <img src={`${process.env.PUBLIC_URL}/img/Ellipse8.png`} className="cilcle_04" alt="circle_bg" ref={img04Ref} />
-          </Img04>
-        </ImgList>
         <TextBox>
           <p>THANK YOU FOR WATCHING</p>
         </TextBox>

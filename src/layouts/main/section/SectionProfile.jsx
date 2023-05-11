@@ -4,71 +4,57 @@ function SectionProfile() {
   return (
     <Container id="profile">
       <Wrap>
-        <TitleWrap>
-          <Title>
-            <h4>01</h4>
-            <h2>about</h2>
-            {/* <h3>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat nesciunt, unde vel, ipsum nulla quos alias quidem velit vero est sed. Voluptate nihil distinctio maiores architecto
-              corrupti, quam suscipit laudantium!
-            </h3> */}
-          </Title>
-        </TitleWrap>
-        <BgWrap>
-          <Bg>
-            <TextWrap>
-              <Txt>
-                <h3>PROFILE</h3>
-                <div>
-                  <ContentWrap>
-                    <h4>name</h4>
-                    <Content> 김아름</Content>
-                  </ContentWrap>
-                  <ContentWrap>
-                    <h4>birth </h4>
-                    <Content>1989.03.07</Content>
-                  </ContentWrap>
-                  <ContentWrap>
-                    <h4>phon numner </h4>
-                    <Content>010.2967.5037</Content>
-                  </ContentWrap>
-                  <ContentWrap>
-                    <h4>e-mail</h4>
-                    <Content>aarreum0307@gmail.com</Content>
-                  </ContentWrap>
-                </div>
-              </Txt>
-              <Txt>
-                <h3>CAREER</h3>
-                <ContentWrap>
-                  <h4>2019.07 - 2021.08</h4>
-                  <Content> (주)단비 빅데이터팀 / 빅데이터 시각화</Content>
-                </ContentWrap>
-              </Txt>
-              <Txt>
-                <h3>EDUCATION</h3>
-                <ContentWrap>
-                  <h4>2023.01.09 - 2023.02.28</h4>
-                  <Content> 프론트엔드 웹 개발자 양성 과정 - HTML5, CSS3, 자바스크립트(Java Script), 제이쿼리(JQuery), 리액트(React)</Content>
-                </ContentWrap>
-                <ContentWrap>
-                  <h4>2021.09.07 - 2022.01.25</h4>
-                  <Content> (디지털디자인)UI/UX 반응형 웹디자인 & 웹퍼블리셔B 수료</Content>
-                </ContentWrap>
-                <ContentWrap>
-                  <h4>2008.03.03 - 2014.08.14 </h4>
-                  <Content>부산외국어대학교 한국어문학부 졸업 /부전공: 일본어문학</Content>
-                </ContentWrap>
-              </Txt>
-              <Txt>
-                <h3>SKILLS</h3>
-                <ContentWrap>
-                  <div> HTML5, CSS3, 자바스크립트(Java Script), 제이쿼리(JQuery), 리액트(React), 깃허브(Github)</div>
-                </ContentWrap>
-              </Txt>
-            </TextWrap>
-          </Bg>
-        </BgWrap>
+        <TextWrap>
+          <Txt>
+            <h3>PROFILE</h3>
+            <div>
+              <ContentWrap>
+                <h4>name</h4>
+                <Content> 김아름</Content>
+              </ContentWrap>
+              <ContentWrap>
+                <h4>birth </h4>
+                <Content>1989.03.07</Content>
+              </ContentWrap>
+              <ContentWrap>
+                <h4>phon numner </h4>
+                <Content>010.2967.5037</Content>
+              </ContentWrap>
+              <ContentWrap>
+                <h4>e-mail</h4>
+                <Content>aarreum0307@gmail.com</Content>
+              </ContentWrap>
+            </div>
+          </Txt>
+          <Txt>
+            <h3>CAREER</h3>
+            <ContentWrap>
+              <h4>2019.07 - 2021.08</h4>
+              <Content> (주)단비 빅데이터팀 / 빅데이터 시각화</Content>
+            </ContentWrap>
+          </Txt>
+          <Txt>
+            <h3>EDUCATION</h3>
+            <ContentWrap>
+              <h4>2023.01.09 - 2023.02.28</h4>
+              <Content> 프론트엔드 웹 개발자 양성 과정 - HTML5, CSS3, 자바스크립트(Java Script), 제이쿼리(JQuery), 리액트(React)</Content>
+            </ContentWrap>
+            <ContentWrap>
+              <h4>2021.09.07 - 2022.01.25</h4>
+              <Content> (디지털디자인)UI/UX 반응형 웹디자인 & 웹퍼블리셔B 수료</Content>
+            </ContentWrap>
+            <ContentWrap>
+              <h4>2008.03.03 - 2014.08.14 </h4>
+              <Content>부산외국어대학교 한국어문학부 졸업 /부전공: 일본어문학</Content>
+            </ContentWrap>
+          </Txt>
+          <Txt>
+            <h3>SKILLS</h3>
+            <ContentWrap>
+              <div> HTML5, CSS3, 자바스크립트(Java Script), 제이쿼리(JQuery), 리액트(React), 깃허브(Github)</div>
+            </ContentWrap>
+          </Txt>
+        </TextWrap>
       </Wrap>
     </Container>
   );
@@ -79,9 +65,9 @@ export default SectionProfile;
 const Container = styled.div`
   z-index: 1;
   position: relative;
-
   width: 100%;
-  background: ${({ theme }) => theme.colors.white_color};
+  height: 1500px;
+
   @media ${({ theme }) => theme.device.laptop} {
     height: 1400px;
   }
@@ -99,180 +85,29 @@ const Container = styled.div`
 
 const Wrap = styled.div`
   width: 100%;
-  max-width: 74%;
-  margin: 0 auto;
-  height: 1200px;
-  display: flex;
-  justify-content: space-between;
+  max-width: 75%;
+  margin: 150px auto;
+
   @media ${({ theme }) => theme.device.laptop} {
     flex-direction: column;
   }
 `;
 
-const TitleWrap = styled.div`
-  z-index: 2;
-
-  width: 75%;
-
-  padding-top: 150px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  @media ${({ theme }) => theme.device.laptop} {
-    z-index: 2;
-    position: relative;
-
-    width: 100%;
-    max-width: 100%;
-    margin-top: 100px;
-    flex-direction: row;
-    display: flex;
-    justify-content: space-between;
-  }
-  @media ${({ theme }) => theme.device.tablet} {
-    width: 100%;
-    max-width: 80%;
-    margin: 50px auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  @media ${({ theme }) => theme.device.mobile} {
-    display: flex;
-    flex-direction: column;
-  }
-`;
-const Title = styled.div`
-  width: 70%;
-  display: flex;
-  flex-direction: column;
-  margin-top: -50px;
-  color: ${({ theme }) => theme.colors.main_color};
-  @media ${({ theme }) => theme.device.laptop} {
-    width: 100%;
-    margin-top: -150px;
-  }
-  @media ${({ theme }) => theme.device.tablet} {
-    width: 100%;
-    margin-top: -150px;
-  }
-  h4 {
-    font-family: "Montserrat";
-    font-weight: 500;
-    color: #000;
-    font-size: 20px;
-    @media ${({ theme }) => theme.device.laptop} {
-      text-align: center;
-      font-family: "Montserrat";
-      font-weight: 500;
-
-      font-size: 18px;
-    }
-    @media ${({ theme }) => theme.device.mobile} {
-      text-align: center;
-      font-family: "Montserrat";
-      font-weight: 500;
-
-      font-size: 18px;
-    }
-  }
-  h2 {
-    width: 100%;
-    font-family: "Montserrat";
-    font-weight: 600;
-
-    font-size: 60px;
-    margin-top: 20px;
-    line-height: 120%;
-    @media ${({ theme }) => theme.device.laptop} {
-      width: 100%;
-      font-family: "Montserrat";
-      font-weight: 600;
-
-      font-size: 60px;
-      margin-top: 15px;
-      line-height: 110%;
-      text-align: center;
-    }
-    @media ${({ theme }) => theme.device.tablet} {
-      width: 100%;
-      font-family: "Montserrat";
-      font-weight: 600;
-
-      margin-top: 10px;
-      line-height: 100%;
-    }
-    @media ${({ theme }) => theme.device.mobile} {
-      text-align: center;
-      width: 100%;
-      font-family: "Montserrat";
-      font-weight: 700;
-
-      margin-top: 20px;
-      line-height: 120%;
-    }
-  }
-  h3 {
-    width: 100%;
-    font-family: "Montserrat";
-    font-weight: 500;
-    color: ${({ theme }) => theme.colors.black_color};
-    font-size: 18px;
-    line-height: 160%;
-    margin-top: 60px;
-    @media ${({ theme }) => theme.device.laptop} {
-      width: 100%;
-    }
-    @media ${({ theme }) => theme.device.mobile} {
-      text-align: center;
-      width: 100%;
-      font-family: "Montserrat";
-      font-weight: 500;
-
-      font-size: 18px;
-      line-height: 160%;
-      margin-top: 40px;
-    }
-  }
-`;
-
-const BgWrap = styled.div`
-  z-index: 1;
-
-  width: 100%;
-  height: 100%;
-  padding-top: 100px;
-
-  /* background-color: black; */
-  @media ${({ theme }) => theme.device.laptop} {
-    z-index: 1;
-    transition: all 0.3s;
-    padding-top: 0;
-  }
-`;
-
-const Bg = styled.div`
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-
-  /* background: #0f3057; */
-  color: ${({ theme }) => theme.colors.black_color};
-`;
 const TextWrap = styled.div`
-  width: 100%;
+  width: 60%;
   height: 100%;
+  margin: 0 auto;
   color: ${({ theme }) => theme.colors.black_color};
 `;
 const Txt = styled.div`
   width: 100%;
   color: ${({ theme }) => theme.colors.black_color};
+  margin: 30px auto;
 
   h3 {
-    text-align: left;
+    text-align: center;
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 3rem;
     padding-top: 50px;
 
     color: ${({ theme }) => theme.colors.main_color};
@@ -280,7 +115,7 @@ const Txt = styled.div`
       content: "";
       display: block;
       width: 100%;
-      height: 2px;
+      height: 1px;
       background: ${({ theme }) => theme.colors.main_color};
       margin: 30px auto;
     }
@@ -299,9 +134,10 @@ const Txt = styled.div`
 const ContentWrap = styled.div`
   position: relative;
   display: flex;
-  justify-content: flex-start;
-  width: 100%;
-  line-height: 160%;
+  justify-content: space-between;
+  width: 80%;
+  margin: 10px auto;
+  line-height: 200%;
   color: ${({ theme }) => theme.colors.black_color};
   h4 {
     width: 40%;

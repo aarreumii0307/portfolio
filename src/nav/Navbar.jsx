@@ -13,33 +13,33 @@ const Navbar = () => {
 
   return (
     <Container scroll={scroll}>
+      <h1>KIMAHREUM PORTFOLIO</h1>
       <Wrap>
-        <Gnb>
-          <LogoWrap>
-            <Logo href="#main">ahreum</Logo>
-          </LogoWrap>
-          <NavWrap>
-            <Nav>
-              <ul>
-                <li>
-                  <a href="#profile">PROFILE</a>
-                  <span></span>
-                </li>
-                <li>
-                  <a href="#develop">DEVELOP</a>
-                  <span></span>
-                </li>
-                <li>
-                  <a href="#project">REACT</a>
-                  <span></span>
-                </li>
-              </ul>
-            </Nav>
-          </NavWrap>
-          <RightNavWrap>
-            <Burger />
-          </RightNavWrap>
-        </Gnb>
+        <NavWrap>
+          <Nav>
+            <ul>
+              <li>
+                <a href="#main">HOME</a>
+                <span></span>
+              </li>
+              <li>
+                <a href="#profile">PROFILE</a>
+                <span></span>
+              </li>
+              <li>
+                <a href="#develop">DEVELOP</a>
+                <span></span>
+              </li>
+              <li>
+                <a href="#project">REACT</a>
+                <span></span>
+              </li>
+            </ul>
+          </Nav>
+        </NavWrap>
+        <RightNavWrap>
+          <Burger />
+        </RightNavWrap>
       </Wrap>
     </Container>
   );
@@ -47,18 +47,9 @@ const Navbar = () => {
 
 const Container = styled.header`
   width: 100%;
-  height: 80px;
-  line-height: 80px;
-  position: fixed;
-  /* background: #e4dccf; */
-  background: ${({ theme }) => theme.colors.white_color};
-  /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
-  font-size: ${({ theme }) => theme.fonts.fontSmall};
-  font-weight: ${({ theme }) => theme.fonts.weightBold};
+  height: 400px;
+  line-height: 300px;
 
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 2px 2px -2px #151515;
   @media ${({ theme }) => theme.device.laptop} {
     position: fixed;
     height: 80px;
@@ -68,58 +59,30 @@ const Container = styled.header`
   @media ${({ theme }) => theme.device.tablet} {
     z-index: 50;
   }
+  h1 {
+    text-align: center;
+    font-size: 6rem;
+  }
 `;
 
 const Wrap = styled.div`
   width: 100%;
-  max-width: 74%;
+  max-width: 75%;
   margin: 0 auto;
-`;
-const Gnb = styled.div`
-  width: 100%;
-
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  color: ${({ theme }) => theme.colors.black_color};
-  /* color: #576f72; */
-
-  /* position: relative; */
-  @media ${({ theme }) => theme.device.laptop} {
-    transition: all 0.3s;
-
-    /* position: fixed; */
-  }
-`;
-
-const LogoWrap = styled.div`
-  width: 10%;
-`;
-const Logo = styled.a`
-  font-weight: 600;
-  font-size: 22px;
-  text-decoration: none;
-  color: ${({ theme }) => theme.colors.main_color};
-
-  @media ${({ theme }) => theme.device.laptop} {
-    font-weight: 600;
-    font-size: 22px;
-    /* 
-    color: #fff; */
-  }
 `;
 
 const NavWrap = styled.div`
   width: 100%;
-
+  position: relative;
   /* position: fixed; */
 `;
 
 const Nav = styled.div`
   width: 100%;
-
+  height: 100px;
+  position: absolute;
   display: flex;
-  justify-content: flex-end;
+
   align-items: center;
 
   @media ${({ theme }) => theme.device.tablet} {
@@ -127,14 +90,15 @@ const Nav = styled.div`
   }
 
   ul {
-    width: 40%;
+    width: 75%;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     li {
       font-size: 15px;
-      font-weight: ${({ theme }) => theme.colors.weightSemiBold};
+      font-weight: 600;
 
       a {
         z-index: 2;

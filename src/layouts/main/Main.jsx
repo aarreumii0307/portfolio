@@ -6,7 +6,6 @@ import SectionDevelop from "./section/SectionDevelop";
 // import Animation from "./section/Animation";
 import SectionProject from "./section/SectionProject";
 
-import SectionSkill from "./section/SectionSkill";
 import SectionProfile from "./section/SectionProfile";
 function Main() {
   const [ScrollY, setScrollY] = useState(0);
