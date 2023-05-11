@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/www.kimahr/kimahr.github.io/aarreum/static/css/main.a9e509dc.css",
+    "main.js": "/www.kimahr/kimahr.github.io/aarreum/static/js/main.051107dd.js",
+    "static/js/787.dc123e75.chunk.js": "/www.kimahr/kimahr.github.io/aarreum/static/js/787.dc123e75.chunk.js",
+    "index.html": "/www.kimahr/kimahr.github.io/aarreum/index.html",
+    "main.a9e509dc.css.map": "/www.kimahr/kimahr.github.io/aarreum/static/css/main.a9e509dc.css.map",
+    "main.051107dd.js.map": "/www.kimahr/kimahr.github.io/aarreum/static/js/main.051107dd.js.map",
+    "787.dc123e75.chunk.js.map": "/www.kimahr/kimahr.github.io/aarreum/static/js/787.dc123e75.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a9e509dc.css",
+    "static/js/main.051107dd.js"
+  ]
+}
