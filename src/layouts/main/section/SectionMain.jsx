@@ -32,5 +32,5 @@ const Wrap = styled.div`
   height: 100%;
   max-width: 75%;
   margin: 0 auto;
-  background: url("img/bg.jpg") center center no-repeat;
+  background: url("img/bg.jpg") center center / cover no-repeat;
 `;

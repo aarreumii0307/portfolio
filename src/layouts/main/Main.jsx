@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useEffect, useState } from "react";
-// import SectionAbout from "./section/SectionAbout";
+import SectionAbout from "./section/SectionAbout";
 import SectionMain from "./section/SectionMain";
 import SectionDevelop from "./section/SectionDevelop";
 // import Animation from "./section/Animation";
@@ -47,11 +47,12 @@ function Main() {
       <Wrap>{BtnStatus && <TopBtn onClick={handleTop}>TOP</TopBtn>}</Wrap>
 
       <SectionMain />
-      <SectionProfile />
+
       {/* <SectionSkill /> */}
       {/* <SectionSkills /> */}
-      {/* <SectionAbout /> */}
+      <SectionAbout />
       <SectionDevelop />
+      <SectionProfile />
       {/* <Animation /> */}
       <SectionProject />
       {/* <SectionSkill /> */}
