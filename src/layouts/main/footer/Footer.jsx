@@ -29,7 +29,7 @@ const Container = styled.div`
   height: 40vw;
   margin: 0 auto;
   position: relative;
-  background-color: #050505;
+  background-color: #4e6e81;
   @media ${({ theme }) => theme.device.laptop} {
     height: 690px;
     position: relative;

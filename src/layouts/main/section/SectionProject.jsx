@@ -1,54 +1,32 @@
 import styled from "styled-components";
-import { useState, useRef, useEffect } from "react";
-function SectionProject() {
-  const data = [
-    {
-      id: 0,
-      title: "MOVIELIST",
-      btn: "01.MOVIELIST",
-      content: "https://kimahr.github.io/movie-list/",
-      image: "/img/movie.jpg",
 
-      dots: "01",
+function SectionProject() {
+  const list = [
+    {
+      name: "MOVIELIST",
+      image: "/img/main_bg01.jpg",
+      url: "https://kimahr.github.io/movie-list/",
+      material: "Recycled",
     },
     {
-      id: 1,
-      title: "TODOLIST",
-      btn: "02.TODOLIST",
-      content: "https://kimahr.github.io/todolist/",
-      image: "/img/todolist.jpg",
-      dots: "02",
+      name: "TODOLIST",
+      image: "/img/main_bg02.jpg",
+      url: "https://kimahr.github.io/todolist/",
+      material: "Recycled",
     },
     {
-      id: 2,
-      title: "PORTFOLIO",
-      btn: "03.PORTFOLIO",
-      content: "https://github.com/KimAhR/aarreumkim/",
+      name: "PORTFOLIO",
       image: "/img/main_bg03.jpg",
-      dots: "03",
+      url: "https://github.com/KimAhR/aarreumkim/",
+      material: "Recycled",
+    },
+    {
+      name: "DIARY",
+      image: "/img/main_bg04.jpg",
+      url: "https://kimahr.github.io/movielist/",
+      material: "Leather",
     },
   ];
-
-  const delay = 2500;
-  const [index, setIndex] = useState(0);
-
-  const timeoutRef = useRef(null);
-
-  function resetTimeout() {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-    }
-  }
-
-  useEffect(() => {
-    resetTimeout();
-    timeoutRef.current = setTimeout(() => setIndex((prevIndex) => (prevIndex === data.length - 1 ? 0 : prevIndex + 1)), delay);
-
-    return () => {
-      resetTimeout();
-    };
-  });
-  const [hover, setHover] = useState(false);
   return (
     <Container id="project">
       <TitleWrap>
@@ -58,20 +36,20 @@ function SectionProject() {
         </Title>
       </TitleWrap>
       <Wrap>
-        <ContentList>
-          <li>
-            MOVIEList<a href="https://kimahr.github.io/movie-list/"></a>
-          </li>
-          <li>
-            TODOLIST<a href="https://kimahr.github.io/todolist/"></a>
-          </li>
-          <li>
-            PORTFOLIO<a href="https://github.com/KimAhR/aarreumkim/"></a>
-          </li>
-          <li>
-            PORTFOLIO<a href="https://github.com/KimAhR/aarreumkim/"></a>
-          </li>
-        </ContentList>
+        <ContentWrap>
+          {list.map((content) => (
+            <li>
+              <ImgArea>
+                <a href={content.url}>
+                  <img src={content.image} />
+                </a>
+              </ImgArea>
+              <HoverWrap>
+                <p>{content.name}</p>
+              </HoverWrap>
+            </li>
+          ))}
+        </ContentWrap>
       </Wrap>
     </Container>
   );
@@ -81,7 +59,7 @@ export default SectionProject;
 
 const Container = styled.div`
   width: 100%;
-  height: 1700px;
+  height: 1200px;
 
   @media only screen and (max-width: 600px) {
     width: 100%;
@@ -161,29 +139,49 @@ const Title = styled.div`
   }
 `;
 
-const ContentList = styled.ul`
-  width: 50%;
-  height: 100%;
+const ContentWrap = styled.ul`
+  width: 100%;
   padding-top: 50px;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 
   li {
-    width: 50%;
+    width: 48%;
     height: 450px;
-    margin-right: 10px;
-    background-color: blue;
+    margin: 10px auto;
+    border: 1px solid #000;
+    position: relative;
 
-    &:hover {
-      opacity: 1;
+    a {
+      width: 100%;
+      height: 100%;
+      transition: all 0.5s;
+      img {
+        width: 100%;
+        height: 100%;
+
+        &:hover {
+          opacity: 0.5;
+        }
+      }
     }
   }
-  a {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+`;
+
+const ImgArea = styled.div`
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+`;
+
+const HoverWrap = styled.div`
+  width: 100%;
+  height: 100%;
+  background: #000;
+  p {
+    color: #fff;
   }
 `;

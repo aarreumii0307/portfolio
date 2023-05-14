@@ -84,16 +84,16 @@ function SectionAbout() {
     <Container id="skills">
       <Wrap>
         <TextLine01>
-          <h1>KIMAHREUM</h1>
+          <h3>KIMAHREUM</h3>
           <p>1989.03.07</p>
           <p>SEOUL MAPOGU</p>
         </TextLine01>
         <TextLine02>
-          <h1>PHONENUMBER</h1>
+          <h3>PHONENUMBER</h3>
           <p>010.2967.5037</p>
         </TextLine02>
         <TextLine03>
-          <h1>E-MAIL</h1>
+          <h3>E-MAIL</h3>
           <p>AARREUM0307@GMAIL.COM</p>
         </TextLine03>
         <TextLine04>
@@ -131,55 +131,83 @@ const Wrap = styled.div`
 `;
 
 const TextLine01 = styled.div`
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   font-size: 2rem;
   font-weight: 600;
-  h1 {
+
+  h3 {
     font-size: 2rem;
     font-weight: 600;
+    &:hover {
+      color: #ce5959;
+    }
   }
   p {
     font-size: 2rem;
     font-weight: 600;
+    &:hover {
+      color: #0066ff;
+    }
   }
 `;
 
 const TextLine02 = styled.div`
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+
+  h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    &:hover {
+      color: #ce5959;
+    }
+  }
   p {
     font-size: 2rem;
     font-weight: 600;
+    &:hover {
+      color: #0066ff;
+    }
   }
 `;
 
 const TextLine03 = styled.div`
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  h1 {
+
+  h3 {
     font-size: 2rem;
     font-weight: 600;
+    &:hover {
+      color: #ce5959;
+    }
   }
   p {
     font-size: 2rem;
     font-weight: 600;
+    &:hover {
+      color: #0066ff;
+    }
   }
 `;
 const TextLine04 = styled.div`
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   p {
     font-size: 2rem;
     font-weight: 600;
+    &:hover {
+      color: #0066ff;
+    }
   }
 `;
 // const TextLine05 = styled.div`
