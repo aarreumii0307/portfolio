@@ -55,7 +55,6 @@ function Main() {
       <SectionProfile />
       {/* <Animation /> */}
       <SectionProject />
-      {/* <SectionSkill /> */}
     </Container>
   );
 }

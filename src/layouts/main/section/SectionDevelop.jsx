@@ -11,7 +11,7 @@ function SectionDevelop() {
         <Content>
           <Title>
             <h3>02</h3>
-            <h2>Front-End Web Develop</h2>
+            <h2>WEB DEVELOP</h2>
           </Title>
           <ContentList>
             <li onMouseOver={() => setHover("/img/main_bg01.jpg")} onMouseOut={() => setHover(null)}>

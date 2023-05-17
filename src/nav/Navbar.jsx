@@ -49,19 +49,28 @@ const Container = styled.header`
   width: 100%;
   height: 400px;
   line-height: 300px;
+  background-color: #fff;
+
+  h1 {
+    text-align: center;
+    font-size: 6rem;
+    @media ${({ theme }) => theme.device.laptop} {
+      display: none;
+    }
+    @media ${({ theme }) => theme.device.tablet} {
+      font-size: 1.25rem;
+    }
+  }
 
   @media ${({ theme }) => theme.device.laptop} {
     position: fixed;
     height: 80px;
     line-height: 80px;
     transition: all 0.3s;
+    z-index: 50;
   }
   @media ${({ theme }) => theme.device.tablet} {
     z-index: 50;
-  }
-  h1 {
-    text-align: center;
-    font-size: 6rem;
   }
 `;
 
@@ -84,10 +93,12 @@ const Nav = styled.div`
   display: flex;
 
   align-items: center;
-
-  @media ${({ theme }) => theme.device.tablet} {
-    display: none;
+  @media ${({ theme }) => theme.device.laptop} {
   }
+
+  /* @media ${({ theme }) => theme.device.tablet} {
+    display: none;
+  } */
 
   ul {
     width: 75%;
@@ -102,7 +113,7 @@ const Nav = styled.div`
 
       a {
         z-index: 2;
-        /* color: ${({ theme }) => theme.colors.white_color}; */
+
         color: ${({ theme }) => theme.colors.black_color};
         position: relative;
         &::before {
@@ -129,11 +140,7 @@ const Nav = styled.div`
 `;
 
 const RightNavWrap = styled.div`
-  max-width: 1400px;
-  margin: 0 auto;
-  @media ${({ theme }) => theme.device.laptop} {
-    right: 40px;
-  }
+  display: none;
 `;
 
 export default Navbar;

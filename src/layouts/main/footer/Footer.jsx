@@ -26,7 +26,7 @@ export default Footer;
 
 const Container = styled.div`
   width: 100%;
-  height: 40vw;
+  height: 600px;
   margin: 0 auto;
   position: relative;
   background-color: #4e6e81;

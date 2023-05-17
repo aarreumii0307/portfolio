@@ -4,19 +4,19 @@ function SectionProject() {
   const list = [
     {
       name: "MOVIELIST",
-      image: "/img/macbook.png",
+      image: "/img/movielist.png",
       url: "https://kimahr.github.io/movie-list/",
       material: "Recycled",
     },
     {
       name: "TODOLIST",
-      image: "/img/macbook.png",
+      image: "/img/todolist.png",
       url: "https://kimahr.github.io/todolist/",
       material: "Recycled",
     },
     {
       name: "PORTFOLIO",
-      image: "/img/macbook.png",
+      image: "/img/portfolio.jpg",
       url: "https://github.com/KimAhR/aarreumkim/",
       material: "Recycled",
     },
@@ -32,23 +32,57 @@ function SectionProject() {
       <TitleWrap>
         <Title>
           <h4>03</h4>
-          <h2>learn react project</h2>
+          <h2>LEARN REACT</h2>
         </Title>
       </TitleWrap>
       <Wrap>
         <ContentWrap>
           {list.map((content) => (
             <li>
-              <ImgArea>
-                <a href={content.url}>
+              <a href={content.url}>
+                <ImgArea>
                   <img src={content.image} />
-                </a>
-              </ImgArea>
-              <HoverWrap>
-                <p>{content.name}</p>
-              </HoverWrap>
+                  <Text>{content.name}</Text>
+                </ImgArea>
+                <HoverWrap>
+                  <p>{content.name}</p>
+                </HoverWrap>
+              </a>
             </li>
           ))}
+          {/* <Content02>
+            <a href="https://kimahr.github.io/movie-list/">
+              <HoverWrap>
+                <p>movielist</p>
+              </HoverWrap>
+            </a>
+
+            <HoverWrap>
+              <p>movielist</p>
+            </HoverWrap>
+          </Content02>
+          <Content03>
+            <a href="https://kimahr.github.io/movie-list/">
+              <HoverWrap>
+                <p>movielist</p>
+              </HoverWrap>
+            </a>
+
+            <HoverWrap>
+              <p>movielist</p>
+            </HoverWrap>
+          </Content03>
+          <Content04>
+            <a href="https://kimahr.github.io/movie-list/">
+              <HoverWrap>
+                <p>movielist</p>
+              </HoverWrap>
+            </a>
+
+            <HoverWrap>
+              <p>movielist</p>
+            </HoverWrap>
+          </Content04> */}
         </ContentWrap>
       </Wrap>
     </Container>
@@ -59,12 +93,12 @@ export default SectionProject;
 
 const Container = styled.div`
   width: 100%;
-  height: 1200px;
+  height: 1400px;
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 768px) {
     width: 100%;
-    height: 800px;
-    margin-top: 900px;
+    height: 1500px;
+    margin-top: -100px;
   }
 `;
 
@@ -88,7 +122,7 @@ const Title = styled.div`
   text-align: center;
   display: flex;
   flex-direction: column;
-  margin-top: -50px;
+  margin-top: -80px;
   @media ${({ theme }) => theme.device.laptop} {
     margin-top: -150px;
   }
@@ -96,13 +130,12 @@ const Title = styled.div`
     width: 100%;
   }
   h4 {
-    font-family: "Montserrat";
     font-weight: 500;
     color: ${({ theme }) => theme.colors.main_color};
     font-size: 20px;
     @media ${({ theme }) => theme.device.mobile} {
       text-align: center;
-      font-family: "Montserrat";
+
       font-weight: 500;
       color: ${({ theme }) => theme.colors.main_color};
       font-size: 18px;
@@ -110,7 +143,7 @@ const Title = styled.div`
   }
   h2 {
     width: 100%;
-    font-family: "Montserrat";
+
     font-weight: 600;
     color: ${({ theme }) => theme.colors.main_color};
     font-size: 60px;
@@ -119,7 +152,7 @@ const Title = styled.div`
 
     @media ${({ theme }) => theme.device.tablet} {
       width: 70%;
-      font-family: "Montserrat";
+
       font-weight: 600;
       color: ${({ theme }) => theme.colors.main_color};
       font-size: 50px;
@@ -129,7 +162,7 @@ const Title = styled.div`
     @media ${({ theme }) => theme.device.mobile} {
       text-align: center;
       width: 100%;
-      font-family: "Montserrat";
+
       font-weight: 700;
       color: ${({ theme }) => theme.colors.main_color};
       font-size: 50px;
@@ -145,44 +178,70 @@ const ContentWrap = styled.ul`
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 
   li {
-    width: 48%;
-    height: 450px;
+    width: 45%;
+    height: 470px;
     margin: 10px auto;
-    border: 1px solid #000;
-    position: relative;
-    background-color: #000;
 
+    box-sizing: border-box;
+    background-color: #112d4e;
+    @media only screen and (max-width: 768px) {
+      width: 100%;
+      height: 300px;
+    }
     a {
+      position: relative;
       width: 100%;
       height: 100%;
-      transition: all 0.5s;
-      img {
-        width: 100%;
-        height: 100%;
+      transition: all 0.1s;
 
-        &:hover {
-          opacity: 0.5;
-        }
-      }
+      color: #000;
     }
   }
 `;
 
 const ImgArea = styled.div`
   position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 70%;
+  background-color: #fff;
+  img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+  }
+`;
+
+const Text = styled.p`
+  width: 50%;
+  height: 20%;
+  margin: 20px auto;
+  font-size: 1.25rem;
+  color: #fff;
+  font-weight: 600;
 `;
 
 const HoverWrap = styled.div`
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
-  background: #000;
-  p {
+  color: transparent;
+  &:hover {
     color: #fff;
+    text-align: center;
+    background: #000;
+    font-weight: 600;
+    opacity: 0.8;
   }
 `;
