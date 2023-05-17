@@ -4,25 +4,25 @@ function SectionProject() {
   const list = [
     {
       name: "MOVIELIST",
-      image: "/img/main_bg01.jpg",
+      image: "/img/macbook.png",
       url: "https://kimahr.github.io/movie-list/",
       material: "Recycled",
     },
     {
       name: "TODOLIST",
-      image: "/img/main_bg02.jpg",
+      image: "/img/macbook.png",
       url: "https://kimahr.github.io/todolist/",
       material: "Recycled",
     },
     {
       name: "PORTFOLIO",
-      image: "/img/main_bg03.jpg",
+      image: "/img/macbook.png",
       url: "https://github.com/KimAhR/aarreumkim/",
       material: "Recycled",
     },
     {
       name: "DIARY",
-      image: "/img/main_bg04.jpg",
+      image: "/img/macbook.png",
       url: "https://kimahr.github.io/movielist/",
       material: "Leather",
     },
@@ -153,6 +153,7 @@ const ContentWrap = styled.ul`
     margin: 10px auto;
     border: 1px solid #000;
     position: relative;
+    background-color: #000;
 
     a {
       width: 100%;
